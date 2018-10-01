@@ -3,3 +3,19 @@
   height: 600px;
   margin-bottom: 1000px;
 }
+
+body {
+  margin-top: 1000px;
+}
+
+.string {
+  color: green;
+}
+
+.method {
+  color: blue;
+}
+
+.num {
+  color: orange;
+}
