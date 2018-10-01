@@ -1,11 +1,64 @@
-.test1 {
-  width: 100%;
-  height: 600px;
-  margin-bottom: 1000px;
+body {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: 'Roboto', sans-serif;
 }
 
-body {
-  margin-top: 1000px;
+p {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 600px;
+
+  font-size: 16px;
+}
+
+.test-text {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.test3 {
+  width: 49%;
+}
+
+.test4 {
+  width: 49%;
 }
 
 .string {
@@ -18,4 +71,42 @@ body {
 
 .num {
   color: orange;
+}
+
+.tab1 {
+  margin-left: 15px;
+}
+
+.tab2 {
+  margin-left: 30px;
+}
+
+.tab3 {
+  margin-left: 45px;
+}
+
+.description {
+  width: 100%;
+  margin: 100px auto;
+}
+
+.github {
+  padding: 10px 15px;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.github:hover {
+  color: white;
+  background-color: black;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
