@@ -1,5 +1,6 @@
 body {
   max-width: 1000px;
+	padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
 
@@ -16,7 +17,6 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 20px;
   margin-top: 30px;
 }
 
@@ -129,5 +129,10 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
+}
+
+.fix-test {
+	width: 800px;
+	height: 600px;
 }

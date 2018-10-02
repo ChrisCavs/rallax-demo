@@ -1,4 +1,4 @@
-import rallax from '../../rallax.js/dist/rallax.js'
+import rallax from 'rallax.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 
