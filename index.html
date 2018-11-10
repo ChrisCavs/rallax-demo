@@ -19,70 +19,24 @@
   </header>
   <main>
     <section class="description">
-      <h1 class="title">Dead-simple <span class="bold">parallax scrolling</span>, without dependencies.</h1>
-    </section>
-
-    <section class="test1 test">
-      <div class="test-text">
-        <p>
-          <span class="method">rallax</span>
-          (
-          <span class="string">'.test'</span>
-          ,
-          <span class="string">'./test-image1'</span>)
-        </p>
-      </div>
+      <div class="fixed dead">Dead</div>
+      <div class="fixed simple">Simple</div>
+      <div class="fixed parallax">Parallax</div>
+      <div class="fixed scrolling">Scrolling</div>
     </section>
 
     <section class="description">
       <h1 class="title">Explore a variety of options, including:</h1>
       <ul class="list">
         <li>Changing parallax <span class="bold">speed</span></li>
-        <li>Adjusting the <span class="bold">scale</span> and <span class="bold">offset</span> of the image</li>
-        <li>Setting a <span class="bold">zIndex</span></li>
-        <li>Specifying when to disable the effect, based on screen width</li>
+        <li>Automatically <span class="bold">disabling</span> and <span class="bold">enabling</span> the effect</li>
+        <li>Setting <span class="bold">callbacks</span></li>
       </ul>
     </section>
 
-    <section class="flex">
-      <div class="test3 test">
-        <div class="test-text">
-          <p>
-            <span class="method">rallax</span>
-            (
-            <span class="string">'.test'</span>
-            ,
-            <span class="string">'./test-image3'</span>, {
-          </p>
-          <p class="tab1">adjust: {</p>
-          <p class="tab2">scale: <span class="num">0.1</span>,</p>
-          <p class="tab2">offset: {</p>
-          <p class="tab3">top: <span class="num">0</span>,</p>
-          <p class="tab3">right: <span class="num">0</span></p>
-          <p class="tab2">})</p>
-          <p class="tab1">})</p>
-          <p>})</p>
-        </div>
-      </div>
-
-      <div class="test4 test">
-        <div class="test-text">
-          <p>
-            <span class="method">rallax</span>
-            (
-            <span class="string">'.test'</span>
-            ,
-            <span class="string">'./test-image3'</span>, {
-          </p>
-          <p class="tab1">adjust: {</p>
-          <p class="tab2">scale: <span class="num">0.1</span>,</p>
-          <p class="tab2">offset: {</p>
-          <p class="tab3">top: <span class="num">0</span>,</p>
-          <p class="tab3">left: <span class="num">0</span></p>
-          <p class="tab2">})</p>
-          <p class="tab1">})</p>
-          <p>})</p>
-        </div>
+    <section class="description">
+      <div class="container">
+        <img class="parallax-image" src="./test-image3.jpg" />
       </div>
     </section>
 
