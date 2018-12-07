@@ -18,29 +18,77 @@
     <a class="github" href="https://github.com/ChrisCavs/rallax.js">On GitHub</a>
   </header>
   <main>
-    <section class="description">
+    <section class="intro">
+      <p>Rallax.js is a vanilla JS plugin that implements a dynamic parallax scrolling effect, without dependencies.  <a href="https://github.com/ChrisCavs/rallax.js">See documentation</a>.</p>
+    </section>
+    <section class="description firstblock">
       <div class="fixed dead">Dead</div>
       <div class="fixed simple">Simple</div>
       <div class="fixed parallax">Parallax</div>
       <div class="fixed scrolling">Scrolling</div>
     </section>
 
-    <section class="description">
-      <h1 class="title">Explore a variety of options, including:</h1>
+    <section class="description code">
+      <pre>
+        <code><span class="comment">// example code for 'dead' block</span></code>
+        <code><span class="var">const</span> dead = <span class="method">rallax</span>(<span class="string">'.dead'</span>)</code>
+        <code class="space"></code>
+        <code>dead.<span class="method">when</span>(</code>
+          <code>() <span class="arrow">=></span> window.<span class="method">scrollY</span>() > <span class="int">350</span>,</code>
+          <code>() <span class="arrow">=></span> dead.<span class="method">changeSpeed</span>(<span class="int">1.1</span>)</code>
+        <code>).<span class="method">when</span>(</code>
+          <code>() <span class="arrow">=></span> window.<span class="method">scrollY</span>() < <span class="int">350</span>,</code>
+          <code>() <span class="arrow">=></span> dead.<span class="method">changeSpeed</span>(<span class="int">0.5</span>)</code>
+        <code>).<span class="method">when</span>(</code>
+          <code>() <span class="arrow">=></span> window.<span class="method">scrollY</span>() > <span class="int">750</span>,</code>
+          <code>() <span class="arrow">=></span> dead.<span class="method">stop</span>()</code>
+        <code>)</code>
+      </pre>
+    </section>
+
+    <section class="description description-tips">
+      <h1 class="title">Explore a variety of <span class="bold">options</span>, including:</h1>
       <ul class="list">
-        <li>Changing parallax <span class="bold">speed</span></li>
-        <li>Automatically <span class="bold">disabling</span> and <span class="bold">enabling</span> the effect</li>
-        <li>Setting <span class="bold">callbacks</span></li>
+        <li>Changing parallax speed</li>
+        <li>Conditionally disabling and enabling the effect</li>
+        <li>Compensating for mobile devices</li>
       </ul>
     </section>
 
-    <section class="description">
+    <section class="description description-image">
       <div class="container">
         <img class="parallax-image" src="./test-image3.jpg" />
       </div>
     </section>
 
-    <section class="description">
+    <section class="description code">
+      <pre>
+        <code><span class="comment">// first use js to take measurements</span></code>
+        <code><span class="var">const</span> speed = <span class="int">0.3</span></code>
+        <code><span class="var">const</span> image = document.<span class="method">querySelector</span>(<span class="string">'.parallax-image'</span>)</code>
+        <code><span class="var">const</span> container = document.<span class="method">querySelector</span>(<span class="string">'.container'</span>)</code>
+        <code><span class="var">const</span> containerRect = container.<span class="method">getBoundingClientRect</span>()</code>
+        <code><span class="var">const</span> winHeight = window.<span class="method">innerHeight</span></code>
+        <code></code>
+        <code><span class="var">const</span> imageTop = -(winHeight * speed) * <span class="int">2</span></code>
+        <code><span class="var">const</span> imageHeight = containerRect.<span class="method">height</span> + (winHeight * speed)</code>
+        <code><span class="var">const</span> imageWidth = containerRect.<span class="method">width</span> + <span class="int">200</span></code>
+        <code><span class="var">const</span> imageLeft = <span class="int">-100</span></code>
+        <code></code>
+        <code>Object.<span class="method">assign</span>(image.style, {</code>
+          <code>position: <span class="string">'relative'</span>,</code>
+          <code>top: <span class="string">`${imageTop}px`</span>,</code>
+          <code>left: <span class="string">`${imageLeft}px`</span>,</code>
+          <code>height: <span class="string">`${imageHeight}px`</span>,</code>
+          <code>width: <span class="string">`${imageWidth}px`</span></code>
+        <code>})</code>
+        <code></code>
+        <code><span class="comment">// add parallax using Rallax.js</span></code>
+        <code><span class="var">const</span> imageParallax = <span class="method">rallax</span>(image, {speed})</code>
+      </pre>
+    </section>
+
+    <section class="description description-final">
       <h1 class="title">Do it all <span class="bold">effortlessly</span>, <span class="bold">quickly</span>, and <span class="bold">without jQuery</span>.</h1>
       <h1 class="title">See the full <a href="https://github.com/ChrisCavs/rallax.js">documentation on GitHub.</a></h1>
     </section>
