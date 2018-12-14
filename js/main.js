@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0)
   }
 
-  const dead = rallax('.dead', {speed: 0.55})
-  const simple = rallax('.simple', {speed: 0.7})
-  const parallax = rallax('.parallax', {speed: 0.6})
-  const scrolling = rallax('.scrolling', {speed: 0.75})
+  const dead = rallax('.dead', {speed: 0.55, mobilePx: 600})
+  const simple = rallax('.simple', {speed: 0.7, mobilePx: 600})
+  const parallax = rallax('.parallax', {speed: 0.6, mobilePx: 600})
+  const scrolling = rallax('.scrolling', {speed: 0.75, mobilePx: 600})
 
   const objects = [dead, simple, parallax, scrolling]
 
@@ -41,5 +41,5 @@ document.addEventListener('DOMContentLoaded', () => {
     width: `${imageWidth}px`,
   })
 
-  const imageParallax = rallax(image)
+  const imageParallax = rallax(image, {mobilePx: 600})
 })

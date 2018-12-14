@@ -163,3 +163,47 @@ footer {
   padding: 40px;
   background-color: rgba(211,211,211,0.5);
 }
+
+@media only screen and (max-width: 600px) {
+	.description {
+		width: 98%;
+	}
+
+	.parallax {
+		left: 0;
+		top: 150px;
+	}
+
+	.scrolling {
+		left: 200px;
+		top: 150px;
+	}
+
+	.intro {
+		height: 150px;
+	}
+
+	.firstblock {
+		height: 350px;
+	}
+
+	.code {
+		padding: 10px;
+	}
+
+	.code pre {
+		margin-left: -60px;
+	}
+
+	code {
+		font-size: 12px;
+	}
+
+	footer {
+		padding: 0;
+	}
+
+	.description-image {
+		display: none;
+	}
+}
