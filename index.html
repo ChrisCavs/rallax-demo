@@ -34,15 +34,11 @@
         <code><span class="var">const</span> dead = <span class="method">rallax</span>(<span class="string">'.dead'</span>)</code>
         <code class="space"></code>
         <code>dead.<span class="method">when</span>(</code>
-          <code>() <span class="arrow">=></span> window.<span class="method">scrollY</span>() > <span class="int">350</span>,</code>
-          <code>() <span class="arrow">=></span> dead.<span class="method">changeSpeed</span>(<span class="int">1.1</span>)</code>
-        <code>).<span class="method">when</span>(</code>
-          <code>() <span class="arrow">=></span> window.<span class="method">scrollY</span>() < <span class="int">350</span>,</code>
-          <code>() <span class="arrow">=></span> dead.<span class="method">changeSpeed</span>(<span class="int">0.5</span>)</code>
-        <code>).<span class="method">when</span>(</code>
-          <code>() <span class="arrow">=></span> window.<span class="method">scrollY</span>() > <span class="int">750</span>,</code>
+          <code>() <span class="arrow">=></span> window.<span class="method">scrollY</span> > <span class="int">750</span>,</code>
           <code>() <span class="arrow">=></span> dead.<span class="method">stop</span>()</code>
-        <code>)</code>
+        <code>).<span class="method">when</span>(</code>
+          <code>() <span class="arrow">=></span> window.<span class="method">scrollY</span> < <span class="int">750</span>,</code>
+          <code>() <span class="arrow">=></span> dead.<span class="method">start</span>()</code>
       </pre>
     </section>
 
@@ -63,18 +59,7 @@
 
     <section class="description code">
       <pre>
-        <code><span class="comment">// first use js to take measurements</span></code>
-        <code><span class="var">const</span> speed = <span class="int">0.3</span></code>
-        <code><span class="var">const</span> image = document.<span class="method">querySelector</span>(<span class="string">'.parallax-image'</span>)</code>
-        <code><span class="var">const</span> container = document.<span class="method">querySelector</span>(<span class="string">'.container'</span>)</code>
-        <code><span class="var">const</span> containerRect = container.<span class="method">getBoundingClientRect</span>()</code>
-        <code><span class="var">const</span> winHeight = window.<span class="method">innerHeight</span></code>
-        <code></code>
-        <code><span class="var">const</span> imageTop = -(winHeight * speed) * <span class="int">2</span></code>
-        <code><span class="var">const</span> imageHeight = containerRect.<span class="method">height</span> + (winHeight * speed)</code>
-        <code><span class="var">const</span> imageWidth = containerRect.<span class="method">width</span> + <span class="int">200</span></code>
-        <code><span class="var">const</span> imageLeft = <span class="int">-100</span></code>
-        <code></code>
+        <code><span class="comment">// first use JS to take measurements, then apply styles</span></code>
         <code>Object.<span class="method">assign</span>(image.style, {</code>
           <code>position: <span class="string">'relative'</span>,</code>
           <code>top: <span class="string">`${imageTop}px`</span>,</code>

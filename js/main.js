@@ -5,44 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0)
   }
 
-  const dead = rallax('.dead')
-  const simple = rallax('.simple')
-  const parallax = rallax('.parallax')
-  const scrolling = rallax('.scrolling')
+  const dead = rallax('.dead', {speed: 0.55})
+  const simple = rallax('.simple', {speed: 0.7})
+  const parallax = rallax('.parallax', {speed: 0.6})
+  const scrolling = rallax('.scrolling', {speed: 0.75})
 
   const objects = [dead, simple, parallax, scrolling]
-
-  dead.when(
-    () => dead.scrollY() > 320,
-    () => dead.changeSpeed(1.1)
-  ).when(
-    () => dead.scrollY() <= 320,
-    () => dead.changeSpeed(0.5)
-  )
-
-  simple.when(
-    () => simple.scrollY() > 320,
-    () => simple.changeSpeed(0.95)
-  ).when(
-    () => simple.scrollY() <= 320,
-    () => simple.changeSpeed(0.6)
-  )
-
-  parallax.when(
-    () => parallax.scrollY() > 320,
-    () => parallax.changeSpeed(0.8)
-  ).when(
-    () => parallax.scrollY() <= 320,
-    () => parallax.changeSpeed(0.7)
-  )
-
-  scrolling.when(
-    () => scrolling.scrollY() > 320,
-    () => scrolling.changeSpeed(0.64)
-  ).when(
-    () => scrolling.scrollY() <= 320,
-    () => scrolling.changeSpeed(0.8)
-  )
 
   objects.forEach(obj => {
       obj.when(
@@ -54,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         () => obj.start()
       )
     })
-  
+
   const image = document.querySelector('.parallax-image')
   const imageContainer = document.querySelector('.container')
   const imageContainerRect = imageContainer.getBoundingClientRect()
